@@ -1,0 +1,11 @@
+.vs/
+bin/
+bin-int/
+TileEdit.sln
+TileEdit.xcworkspace
+
+TileEdit/*
+!TileEdit/src/
+!TileEdit/src/**
+!TileEdit/res/
+!TileEdit/res/**
