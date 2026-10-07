@@ -23,10 +23,14 @@ public:
 	void SetCharacterSize(int32_t sizeInPixels);
 	void SetFillColor(sf::Color color);
 	void SetTextStyle(sf::Text::Style style);
+	void SetOrigin(sf::Vector2f origin);
 
 	void Render(Window* window);
 
 	int32_t GetWidth();
 	int32_t GetHeight();
+
+	inline const std::string& GetString() { return m_String; }
+	sf::FloatRect GetLocalBounds();
 };
 

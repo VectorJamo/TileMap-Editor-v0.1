@@ -4,9 +4,13 @@
 #include "../graphics/Window.h"
 
 #include "Keys.h"
+#include <iostream>
 
 class Input
 {
+public:
+    static std::optional<uint32_t> TypedChar; // For InputBoxes
+
 private:
     static Window* m_Window;
 
@@ -16,4 +20,6 @@ public:
     static bool IsKeyPressed(const Key& key);
     static bool IsMouseButtonPressed(const MouseButton& button);
     static sf::Vector2i GetMousePosition();
+
+    static void ResetTypedChar();
 };

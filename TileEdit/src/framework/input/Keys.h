@@ -1,5 +1,6 @@
 #pragma once
 
+
 enum class Key
 {
     Unknown = -1, //!< Unhandled key

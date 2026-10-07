@@ -13,7 +13,7 @@ MenuState::MenuState(Window* window)
 	LoadAssets();
 
 	// UI
-	m_TitleText = std::make_unique<Text>(m_Assets->GetFont(AssetManager::GetFromFontDir("8-bit/8-bit-pusab.ttf")), "SFML3 Engine");
+	m_TitleText = std::make_unique<Text>(m_Assets->GetFont(AssetManager::GetFromFontDir("8-bit/8-bit-pusab.ttf")), "Tile Map Editor v1.0");
 	m_TitleText->SetFillColor(AppTheme::TextColorPrimary);
 
 	m_StartButton = std::make_unique<Button>("Start", m_Assets->GetFont(AssetManager::GetFromFontDir("8-bit/8-bit-pusab.ttf")));
@@ -45,7 +45,7 @@ void MenuState::Update(float deltaTime)
 
 	if (m_StartButton->IsHovered())
 	{
-		m_StartButton->SetBackgroundColor(AppTheme::TextColorSecondary);
+		m_StartButton->SetBackgroundColor({100, 100, 100, 255});
 	}
 	else {
 		m_StartButton->SetBackgroundColor(sf::Color::Transparent);

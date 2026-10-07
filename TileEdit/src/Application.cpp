@@ -34,6 +34,10 @@ void Application::Run()
 			{
 				m_Window->Close();
 			}
+			if (event->is<sf::Event::TextEntered>())
+			{
+				Input::TypedChar = event->getIf<sf::Event::TextEntered>()->unicode;
+			}
 		}
 
 		// Clear the frame
@@ -47,5 +51,7 @@ void Application::Run()
 
 		// Swap buffers
 		m_Window->Show();
+
+		Input::ResetTypedChar();
 	}
 }

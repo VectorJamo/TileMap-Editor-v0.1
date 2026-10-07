@@ -60,6 +60,11 @@ void Text::SetTextStyle(sf::Text::Style style)
 	m_Text->setStyle(style);
 }
 
+void Text::SetOrigin(sf::Vector2f origin)
+{
+	m_Text->setOrigin(origin);
+}
+
 void Text::Render(Window* window)
 {
 	window->GetWindowInstance()->draw(*m_Text);
@@ -73,4 +78,9 @@ int32_t Text::GetWidth()
 int32_t Text::GetHeight()
 {
 	return (int32_t)(m_Text->getLocalBounds().size.y);
+}
+
+sf::FloatRect Text::GetLocalBounds()
+{
+	return m_Text->getLocalBounds();
 }
